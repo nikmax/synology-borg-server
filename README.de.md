@@ -185,17 +185,8 @@ Führe diese Schritte aus, bevor du den Server das erste Mal startest:
    Option A (CLI-Beispiel, Synology-SSH-Shell):
 
    ```bash
-   SHARE_ROOT=/volume1/borg-backups
-
-   mkdir -p "$SHARE_ROOT/config/ssh"
-   mkdir -p "$SHARE_ROOT/repos"
-   touch "$SHARE_ROOT/config/authorized_keys"
-
-   chown -R <BORG_UID>:<BORG_GID> "$SHARE_ROOT/repos"
-   chown <BORG_UID>:<BORG_GID> "$SHARE_ROOT/config/authorized_keys"
-
-   chmod 750 "$SHARE_ROOT/repos"
-   chmod 600 "$SHARE_ROOT/config/authorized_keys"
+   chmod +x context/install.sh
+   context/install.sh
    ```
 
    Option B (Synology DSM 7 UI-Beispiel):
